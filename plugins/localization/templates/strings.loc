@@ -1,0 +1,5 @@
+key,en,es,#note
+title,My game,Mi juego,the window's title
+start,Press SPACE to start,Pulsa ESPACIO para empezar,
+lives|one,{n} life,{n} vida,
+lives|other,{n} lives,{n} vidas,

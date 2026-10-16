@@ -1,0 +1,10 @@
+-- a sprite animation (plugins/spriteanim): import its sheet (a picture beside it), then drag its frames
+return {
+  version = 2,
+  sheet = "",
+  anims = {
+    { name = "idle", frames = {
+      { rect = { 0, 0, 32, 32 }, pause = 100, jump = 1 },
+    } },
+  },
+}

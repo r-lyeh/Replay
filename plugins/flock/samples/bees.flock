@@ -1,0 +1,26 @@
+-- a flock (plugins/flock): Bees
+return {
+  alignment = 0.2,
+  avoid = 3,
+  cohesion = 1.8,
+  color = { 255, 220, 60, 255 },
+  color2 = { 60, 40, 10, 255 },
+  count = 70,
+  edges = "bounce",
+  field = {
+    h = 400,
+    w = 640
+  },
+  flee = 4,
+  flee_radius = 90,
+  goal = 1.2,
+  leader = 0,
+  max_force = 500,
+  max_speed = 110,
+  min_speed = 30,
+  radius = 25,
+  separation = 1.4,
+  separation_radius = 8,
+  size = 3,
+  wander = 1.6
+}

@@ -1,0 +1,19 @@
+-- a sprite animation (plugins/spriteanim): slime.png's frames (runtime/anim.lua)
+return {
+  version = 2,
+  sheet = "slime.png",
+  anims = {
+    { name = "idle", frames = {
+      { rect = { 0, 0, 32, 32 }, pivot = { 16, 29 }, pause = 160, hits = { { 5, 14, 27, 30 } } },
+      { rect = { 32, 0, 64, 32 }, pivot = { 16, 29 }, pause = 160, hits = { { 5, 14, 27, 30 } } },
+      { rect = { 64, 0, 96, 32 }, pivot = { 16, 29 }, pause = 160, hits = { { 5, 14, 27, 30 } } },
+      { rect = { 96, 0, 128, 32 }, pivot = { 16, 29 }, pause = 160, hits = { { 5, 14, 27, 30 } }, jump = 1 },
+    } },
+    { name = "hop", frames = {
+      { rect = { 0, 32, 32, 64 }, pivot = { 16, 29 }, pause = 90, events = { 'sound("squish")' } },
+      { rect = { 32, 32, 64, 64 }, pivot = { 16, 29 }, pause = 120, hits = { { 5, 8, 27, 24 } } },
+      { rect = { 64, 32, 96, 64 }, pivot = { 16, 29 }, pause = 120, hits = { { 5, 4, 27, 20 } } },
+      { rect = { 96, 32, 128, 64 }, pivot = { 16, 29 }, pause = 90, events = { 'fx("dust")' }, jump = "idle 1" },
+    } },
+  },
+}
