@@ -1,0 +1,12 @@
+-- rocky ground (plugins/foliage): boulders apart, pebbles in between, a little dry grass
+return {
+  seed = 5, w = 16, d = 16, y = 0,
+  layers = {
+    { name = "boulders", mesh = "cube", size = { 1.0, 0.7, 0.9 }, density = 0.04, scale = { 0.6, 1.8 }, tilt = 30, sink = 0.25,
+      color = { 128, 122, 116 }, shade = 0.2, cluster = 0, spacing = 3 },
+    { name = "pebbles", mesh = "sphere", size = { 0.12, 0.07, 0.1 }, density = 2, scale = { 0.5, 1.5 }, sink = 0.02,
+      color = { 150, 144, 136 }, shade = 0.25, cluster = 0.4, clump = 2 },
+    { name = "dry grass", mesh = "grass", size = { 0.25, 0.3, 0.25 }, density = 3, scale = { 0.6, 1.2 }, tilt = 15,
+      color = { 170, 160, 90 }, shade = 0.2, cluster = 0.6, clump = 2, wind = 0.2 },
+  },
+}

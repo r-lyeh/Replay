@@ -1,0 +1,26 @@
+-- a flock (plugins/flock): boids' settings (runtime/flock.lua)
+return {
+  alignment = 1,
+  avoid = 3,
+  cohesion = 0.8,
+  color = { 220, 230, 255, 255 },
+  color2 = { 120, 170, 255, 255 },
+  count = 60,
+  edges = "bounce",
+  field = {
+    h = 400,
+    w = 640
+  },
+  flee = 4,
+  flee_radius = 90,
+  goal = 0.4,
+  leader = 0,
+  max_force = 240,
+  max_speed = 120,
+  min_speed = 40,
+  radius = 40,
+  separation = 1.6,
+  separation_radius = 16,
+  size = 5,
+  wander = 0.3
+}

@@ -1,0 +1,6 @@
+-- peaks: sharp ridges, snow on top (plugins/landscape's sample)
+return {
+  w = 128, d = 128, cells = 128,
+  base = { kind = "hills", seed = 9, height = 34, scale = 60, octaves = 6, ridges = 0.75, sea = 0.2 },
+  colors = { low = { 84, 120, 62 }, high = { 120, 126, 96 }, rock = { 110, 104, 98 }, snow = { 244, 246, 250 }, rock_slope = 0.4, snow_at = 0.72 },
+}

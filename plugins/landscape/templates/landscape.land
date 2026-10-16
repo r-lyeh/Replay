@@ -1,0 +1,6 @@
+-- a landscape (plugins/landscape: the landscape editor; runtime/landscape.lua): flat, ready to sculpt
+return {
+  w = 64, d = 64, cells = 64,
+  base = { kind = "flat", seed = 1, height = 8, scale = 24, octaves = 4, ridges = 0, sea = 0 },
+  colors = { low = { 96, 140, 70 }, high = { 130, 150, 90 }, rock = { 125, 118, 108 }, snow = { 240, 242, 248 }, rock_slope = 0.55, snow_at = 1 },
+}

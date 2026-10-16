@@ -1,0 +1,6 @@
+-- dunes: low, smooth, sand (plugins/landscape's sample)
+return {
+  w = 96, d = 96, cells = 96,
+  base = { kind = "hills", seed = 21, height = 5, scale = 18, octaves = 2, ridges = 0.4, sea = 0 },
+  colors = { low = { 214, 184, 126 }, high = { 236, 210, 156 }, rock = { 190, 150, 100 }, snow = { 240, 242, 248 }, rock_slope = 0.8, snow_at = 1 },
+}

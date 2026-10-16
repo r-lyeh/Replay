@@ -1,0 +1,6 @@
+-- hills: rolling grass, rock on the steep sides (plugins/landscape's sample)
+return {
+  w = 64, d = 64, cells = 96,
+  base = { kind = "hills", seed = 4, height = 9, scale = 26, octaves = 5, ridges = 0.15, sea = 0.1 },
+  colors = { low = { 92, 138, 66 }, high = { 138, 152, 88 }, rock = { 122, 114, 104 }, snow = { 240, 242, 248 }, rock_slope = 0.5, snow_at = 1 },
+}

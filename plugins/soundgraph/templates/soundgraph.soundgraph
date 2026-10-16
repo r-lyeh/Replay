@@ -1,0 +1,18 @@
+-- a sound graph (plugins/soundgraph): its nodes and the wires between them
+return {
+  links = {
+    { from = 1, input = "pitch", out = "out", to = 2 },
+    { from = 2, input = "in", out = "out", to = 3 },
+    { from = 3, input = "in", out = "out", to = 5 },
+    { from = 4, input = "amount", out = "out", to = 5 },
+    { from = 5, input = "in", out = "out", to = 6 },
+  },
+  nodes = {
+    { data = { from = 1.5, to = -1.5, time = 0.25, curve = -0.4 }, id = 1, kind = "slide", x = -520, y = -40 },
+    { data = { wave = 3, freq = 880, level = 0.8 }, id = 2, kind = "osc", x = -320, y = -60 },
+    { data = { type = 1, cutoff = 3000, q = 1.2 }, id = 3, kind = "filter", x = -110, y = -60 },
+    { data = { attack = 0.005, decay = 0.1, sustain = 0.3, hold = 0.15, release = 0.1 }, id = 4, kind = "env", x = -110, y = 140 },
+    { data = { gain = 1 }, id = 5, kind = "gain", x = 110, y = -20 },
+    { data = { length = 0.35, volume = 0.8 }, id = 6, kind = "output", x = 300, y = -20 },
+  },
+}

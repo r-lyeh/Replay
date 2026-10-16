@@ -1,0 +1,14 @@
+-- a meadow (plugins/foliage): grass in clumps, flowers, bushes and rocks over 24 x 24 m (runtime/foliage.lua says what each is)
+return {
+  seed = 11, w = 24, d = 24, y = 0,
+  layers = {
+    { name = "grass", mesh = "grass", size = { 0.35, 0.45, 0.35 }, density = 9, scale = { 0.6, 1.4 }, yaw = true, tilt = 10,
+      color = { 96, 168, 72 }, shade = 0.3, cluster = 0.35, clump = 3, wind = 0.25, fade = 18 },
+    { name = "flowers", mesh = "sphere", size = { 0.09, 0.09, 0.09 }, density = 0.5, scale = { 0.7, 1.2 }, sink = -0.35,
+      color = { 240, 210, 80 }, shade = 0.15, cluster = 0.55, clump = 2.5, wind = 0.15, fade = 14 },
+    { name = "bushes", mesh = "bush", variants = 3, size = { 1.1, 0.8, 1.1 }, density = 0.05, scale = { 0.6, 1.3 }, sink = 0.05,
+      color = { 220, 235, 215 }, shade = 0.2, cluster = 0, spacing = 1.5, wind = 0.08 },
+    { name = "rocks", mesh = "cube", size = { 0.5, 0.35, 0.45 }, density = 0.03, scale = { 0.5, 1.6 }, tilt = 25, sink = 0.1,
+      color = { 140, 136, 128 }, shade = 0.2, cluster = 0, spacing = 2 },
+  },
+}

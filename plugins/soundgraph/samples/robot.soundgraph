@@ -1,0 +1,23 @@
+-- a sound graph (plugins/soundgraph): its nodes and the wires between them
+-- (a vocoder: a buzz, shaped by a wobbling, filtered hiss)
+return {
+  links = {
+    { from = 1, input = "carrier", out = "out", to = 6 },
+    { from = 2, input = "in", out = "out", to = 4 },
+    { from = 3, input = "cutoff", out = "out", to = 4 },
+    { from = 4, input = "in", out = "out", to = 5 },
+    { from = 7, input = "amount", out = "out", to = 5 },
+    { from = 5, input = "modulator", out = "out", to = 6 },
+    { from = 6, input = "in", out = "out", to = 8 },
+  },
+  nodes = {
+    { data = { wave = 3, freq = 110, level = 0.8 }, id = 1, kind = "osc", x = -320, y = -160 },
+    { data = { color = 1, level = 0.8, seed = 3 }, id = 2, kind = "noise", x = -760, y = 20 },
+    { data = { wave = 4, rate = 3.5, depth = 1.5, offset = 0 }, id = 3, kind = "lfo", x = -760, y = 170 },
+    { data = { type = 3, cutoff = 900, q = 4 }, id = 4, kind = "filter", x = -540, y = 20 },
+    { data = { gain = 2 }, id = 5, kind = "gain", x = -320, y = 60 },
+    { data = { attack = 0.02, decay = 0.1, sustain = 0.8, hold = 0.9, release = 0.2 }, id = 7, kind = "env", x = -540, y = 230 },
+    { data = { bands = 16, low = 120, high = 6000, release = 0.03, gain = 1 }, id = 6, kind = "vocoder", x = -90, y = -60 },
+    { data = { length = 1.2, volume = 0.9 }, id = 8, kind = "output", x = 140, y = -40 },
+  },
+}
