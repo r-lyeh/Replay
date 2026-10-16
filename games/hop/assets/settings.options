@@ -1,0 +1,39 @@
+-- an options menu (plugins/options; runtime/options.lua: how a game shows it)
+return {
+  title = "Options",
+  look = { font = "sans-bold", font_size = 13, tab_shear = 0.25 },
+  tabs = {
+    { name = "Game", sections = {
+      { name = "Player", items = {
+        { id = "name", type = "text", label = "Name", default = "Hopper", maxlen = 10, tip = "Shown by the gems" },
+        { id = "code", type = "text", label = "Secret code", default = "", password = true, maxlen = 8, tip = "Try fly" },
+      } },
+      { name = "Controls", items = {
+        { id = "jump", type = "enum", label = "Jump height", default = "Normal", values = { "Low", "Normal", "High" } },
+        { id = "speed", type = "slider", label = "Run speed", default = 1, min = 0.5, max = 1.5, step = 0.05, deadzone = 0.03, percent = false, fmt = "x%.2f", tip = "How fast left / right go" },
+        { id = "hud", type = "bool", label = "Show the gems", default = true },
+      } },
+      { name = "Keys", items = {
+        { id = "key_jump", type = "key", label = "Jump", action = "jump", default = "", tip = "Enter, then a key or a pad button" },
+        { id = "key_left", type = "key", label = "Left", action = "left", default = "" },
+        { id = "key_right", type = "key", label = "Right", action = "right", default = "" },
+      } },
+      { name = "Level", items = {
+        { id = "restart", type = "button", label = "Start again", action = "restart", text = "Restart", tip = "Back to the start, the gems back" },
+        { id = "close", type = "button", label = "Back to the game", action = "close", text = "Close" },
+      } },
+    } },
+    { name = "Display", sections = {
+      { name = "Window", items = {
+        { id = "fullscreen", type = "bool", label = "Full screen", default = false, window = "fullscreen", tip = "In the editor, Stop undoes it" },
+        { id = "language", type = "language", label = "Language", tip = "The game's texts: assets/strings.loc" },
+      } },
+    } },
+    { name = "Audio", sections = {
+      { name = "Volume", items = {
+        { id = "sfx", type = "slider", label = "Sound effects", default = 1, min = 0, max = 1, step = 0.05, deadzone = 0.02, percent = true, bus = "sfx", live = true, tip = "Heard as you move it" },
+        { id = "music", type = "slider", label = "Music", default = 0.8, min = 0, max = 1, step = 0.05, deadzone = 0.02, percent = true, bus = "music", live = true },
+      } },
+    } },
+  },
+}

@@ -1,0 +1,27 @@
+-- an options menu (plugins/options; runtime/options.lua: how a game shows it)
+return {
+  title = "Options",
+  tabs = {
+    { name = "Gameplay", sections = {
+      { name = "General", items = {
+        { id = "difficulty", type = "enum", label = "Difficulty", default = "Normal", values = { "Easy", "Normal", "Hard" } },
+        { id = "hints", type = "bool", label = "Show hints", default = true, tip = "Tips on the screen now and then" },
+        { id = "name", type = "text", label = "Player name", default = "Player", maxlen = 12 },
+      } },
+    } },
+    { name = "Audio", sections = {
+      { name = "Volume", items = {
+        { id = "sfx", type = "slider", label = "Sound effects", default = 1, min = 0, max = 1, step = 0.05, deadzone = 0.02, percent = true, bus = "sfx", live = true },
+        { id = "music", type = "slider", label = "Music", default = 0.8, min = 0, max = 1, step = 0.05, deadzone = 0.02, percent = true, bus = "music", live = true },
+        { id = "voice", type = "slider", label = "Voices", default = 1, min = 0, max = 1, step = 0.05, deadzone = 0.02, percent = true, bus = "voice", live = true },
+      } },
+    } },
+    { name = "Controls", sections = {
+      { name = "Pad", items = {
+        { id = "deadzone", type = "slider", label = "Stick dead zone", default = 0.15, min = 0, max = 0.5, step = 0.01, percent = false, fmt = "%.2f" },
+        { id = "invert", type = "bool", label = "Invert Y", default = false },
+        { id = "rumble", type = "bool", label = "Vibration", default = true },
+      } },
+    } },
+  },
+}

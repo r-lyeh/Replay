@@ -1,0 +1,6 @@
+key,en,es,fr,#note
+hud_gems,{name}: gems {got} / {total},{name}: gemas {got} / {total},{name} : gemmes {got} / {total},the count at the top left
+door_open,   the door is open!,   la puerta esta abierta!,   la porte est ouverte !,after the count
+won|one,you made it! {n} second,logrado! {n} segundo,bravo ! {n} seconde,the banner after a win: the seconds to the next round
+won|other,you made it! {n} seconds,logrado! {n} segundos,bravo ! {n} secondes,
+hint,O / Start: options,O / Start: opciones,O / Start : options,top right

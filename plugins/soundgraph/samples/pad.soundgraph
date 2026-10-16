@@ -1,0 +1,15 @@
+-- a sound graph (plugins/soundgraph): its nodes and the wires between them
+-- (bell.soundgraph, beside it, stretched six times slower: Paulstretch; then chorus and reverb)
+return {
+  links = {
+    { from = 1, input = "in", out = "out", to = 2 },
+    { from = 2, input = "in", out = "out", to = 3 },
+    { from = 3, input = "in", out = "out", to = 4 },
+  },
+  nodes = {
+    { data = { file = "bell.soundgraph", stretch = 6, window = 0.25, level = 1 }, id = 1, kind = "stretch", x = -420, y = -40 },
+    { data = { rate = 0.4, depth = 6, mix = 0.5 }, id = 2, kind = "chorus", x = -200, y = -40 },
+    { data = { room = 0.8, damp = 0.4, mix = 0.4 }, id = 3, kind = "reverb", x = 10, y = -40 },
+    { data = { length = 4, volume = 0.8 }, id = 4, kind = "output", x = 220, y = -40 },
+  },
+}

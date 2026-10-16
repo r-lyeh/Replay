@@ -1,0 +1,26 @@
+-- a flock (plugins/flock): Bats
+return {
+  alignment = 0.4,
+  avoid = 3,
+  cohesion = 0.6,
+  color = { 70, 60, 90, 255 },
+  color2 = { 130, 110, 150, 255 },
+  count = 40,
+  edges = "bounce",
+  field = {
+    h = 400,
+    w = 640
+  },
+  flee = 4,
+  flee_radius = 90,
+  goal = 0.4,
+  leader = 0,
+  max_force = 420,
+  max_speed = 160,
+  min_speed = 70,
+  radius = 50,
+  separation = 2,
+  separation_radius = 22,
+  size = 6,
+  wander = 1.2
+}
